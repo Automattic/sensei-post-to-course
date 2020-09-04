@@ -13,7 +13,7 @@
  * @package           Sensei_Post_To_Course
  *
  * @wordpress-plugin
- * Plugin Name:       Post to Course Creator for Sensei LMS
+ * Plugin Name:       Sensei LMS Post to Course Creator
  * Plugin URI:        https://github.com/automattic/sensei-post-to-course
  * Description:       Turn your blog posts into online courses.
  * Version:           1.0.0

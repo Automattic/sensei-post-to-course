@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Post to Course Creator for Sensei LMS Extension Dependencies Check
+ * Sensei LMS Post to Course Creator Extension Dependencies Check
  *
  * @since 2.0.0
  */
@@ -95,7 +95,7 @@ class Sensei_Post_To_Course_Dependency_Checker {
 
 		// translators: %1$s is version of PHP that this plugin requires; %2$s is the version of PHP WordPress is running on.
 		$message        = sprintf(
-			__( '<strong>Post to Course Creator for Sensei LMS</strong> requires a minimum PHP version of %1$s, but you are running %2$s.', 'sensei-post-to-course' ),
+			__( '<strong>Sensei LMS Post to Course Creator</strong> requires a minimum PHP version of %1$s, but you are running %2$s.', 'sensei-post-to-course' ),
 			self::MINIMUM_PHP_VERSION,
 			phpversion()
 		);
@@ -133,7 +133,7 @@ class Sensei_Post_To_Course_Dependency_Checker {
 
 		// translators: %1$s is the minimum version number of Sensei that is required.
 		$message = sprintf(
-			__( '<strong>Post to Course Creator for Sensei LMS</strong> requires that the plugin <strong>Sensei LMS</strong> (minimum version: <strong>%1$s</strong>) is installed and activated.', 'sensei-post-to-course' ),
+			__( '<strong>Sensei LMS Post to Course Creator</strong> requires that the plugin <strong>Sensei LMS</strong> (minimum version: <strong>%1$s</strong>) is installed and activated.', 'sensei-post-to-course' ),
 			self::MINIMUM_SENSEI_VERSION
 		);
 

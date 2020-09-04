@@ -1,4 +1,4 @@
-=== Post to Course Creator for Sensei LMS ===
+=== Sensei LMS Post to Course Creator ===
 Contributors: automattic, donnapep
 Donate link: https://automattic.com
 Tags: sensei lms, course, online course
@@ -13,7 +13,7 @@ Turn your blog posts into online courses!
 
 == Description ==
 
-Post to Course Creator for Sensei LMS takes the wealth of information you've already gathered in your blog posts, and turns it into an online course.
+Sensei LMS Post to Course Creator takes the wealth of information you've already gathered in your blog posts, and turns it into an online course.
 
 All you need to do is give your course a name and select a post category. Every post with the specified category is then recreated as a lesson.
 
@@ -32,7 +32,7 @@ Create as many new courses as you like!
 1. Log into your WordPress admin panel and click on *Plugins* in the sidebar.
 2. Confirm that Sensei LMS is already installed and activated. If it's not, you'll need to do so first.
 3. Click on the *Add New* button near the top of the screen.
-4. Enter "Post to Course Creator for Sensei LMS" into the search field.
+4. Enter "Sensei LMS Post to Course Creator" into the search field.
 5. Once you've located the plugin, click *Install Now*.
 6. Click *Activate*.
 
