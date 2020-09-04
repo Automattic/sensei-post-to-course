@@ -1,0 +1,6 @@
+{
+    "require": {
+        "deliciousbrains/wp-background-processing": "^1.0",
+        "coenjacobs/mozart": "^0.5.1"
+    }
+}

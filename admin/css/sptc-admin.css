@@ -1,0 +1,24 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.sptc-description {
+	margin-bottom: 2em;
+}
+
+.sptc-setting {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.sptc-setting-label {
+	flex: 1;
+}
+
+.sptc-setting-value {
+	flex: 6;
+}
+
+.sptc-setting-description {
+	margin-top: .2em;
+}
