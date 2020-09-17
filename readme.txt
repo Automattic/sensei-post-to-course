@@ -15,7 +15,7 @@ Turn your blog posts into online courses!
 
 Sensei LMS Post to Course Creator takes the wealth of information you've already gathered in your blog posts, and turns it into an online course.
 
-All you need to do is give your course a name and select a post category. Every post with the specified category is then recreated as a lesson.
+To convert your posts to courses, go to *Tools* > *Post to Course Creator*, give your course a name, and select a category. Every post with the specified category is then recreated as a lesson.
 
 When the lesson is created, the following information is carried over from the post:
 - Title
@@ -35,6 +35,7 @@ Create as many new courses as you like!
 4. Enter "Sensei LMS Post to Course Creator" into the search field.
 5. Once you've located the plugin, click *Install Now*.
 6. Click *Activate*.
+7. Go to *Tools* > *Post to Course Creator*.
 
 = Manual installation =
 
@@ -42,6 +43,7 @@ Create as many new courses as you like!
 2. Download the plugin file to your computer and unzip it.
 3. Using an FTP program, or your hosting control panel, upload the unzipped plugin folder to your WordPress installation's `wp-content/plugins/` directory on the server.
 4. Log into your WordPress admin panel and activate the plugin from the *Plugins* menu.
+5. Go to *Tools* > *Post to Course Creator*.
 
 == Screenshots ==
 
