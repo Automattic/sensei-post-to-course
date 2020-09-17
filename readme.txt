@@ -18,10 +18,10 @@ Sensei LMS Post to Course Creator takes the wealth of information you've already
 To convert your posts to courses, go to *Tools* > *Post to Course Creator*, give your course a name, and select a category. Every post with the specified category is then recreated as a lesson.
 
 When the lesson is created, the following information is carried over from the post:
-- Title
-- Content
-- Excerpt
-- Featured image
+* Title
+* Content
+* Excerpt
+* Featured image
 
 Create as many new courses as you like!
 
