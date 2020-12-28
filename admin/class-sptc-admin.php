@@ -178,9 +178,27 @@ class Sensei_Post_To_Course_Admin {
 			return 0;
 		}
 
+		$content = '';
+
+		// Add course blocks if the site is configured to use blocks.
+		if ( function_exists( 'register_block_type' ) && ! $this->is_classic_editor_plugin_active() ) {
+			$content = '<!-- wp:sensei-lms/button-take-course -->
+				<div class="wp-block-sensei-lms-button-take-course is-style-default wp-block-sensei-button wp-block-button has-text-align-left"><button class="wp-block-button__link">Take Course</button></div>
+				<!-- /wp:sensei-lms/button-take-course -->
+
+				<!-- wp:sensei-lms/button-contact-teacher -->
+				<div class="wp-block-sensei-lms-button-contact-teacher is-style-outline wp-block-sensei-button wp-block-button has-text-align-left"><a class="wp-block-button__link">Contact Teacher</a></div>
+				<!-- /wp:sensei-lms/button-contact-teacher -->
+
+				<!-- wp:sensei-lms/course-progress /-->
+
+				<!-- wp:sensei-lms/course-outline /-->';
+		}
+
 		$course_id = wp_insert_post( array(
-			'post_title' => $course_name,
-			'post_type'  => 'course',
+			'post_content' => $content,
+			'post_title'   => $course_name,
+			'post_type'    => 'course',
 		) );
 
 		return $course_id;
@@ -218,5 +236,23 @@ class Sensei_Post_To_Course_Admin {
 		}
 
 		$this->process_lessons->save()->dispatch();
+	}
+
+	/**
+	 * Check if Classic Editor plugin is active.
+	 *
+	 * @since  1.1.0
+	 * @return bool  True if the Classic Editor plugin is active.
+	 */
+	private function is_classic_editor_plugin_active() {
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			include_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		if ( is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
+			return true;
+		}
+
+		return false;
 	}
 }
