@@ -67,6 +67,8 @@ function run_sensei_post_to_course() {
 	$plugin->run();
 }
 
-if ( Sensei_Post_To_Course_Dependency_Checker::are_plugin_dependencies_met() ) {
-	run_sensei_post_to_course();
-}
+add_action('plugins_loaded', function () {
+	if ( Sensei_Post_To_Course_Dependency_Checker::are_plugin_dependencies_met() ) {
+		run_sensei_post_to_course();
+	}
+});
