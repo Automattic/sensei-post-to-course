@@ -2,10 +2,10 @@
 Contributors: automattic, donnapep
 Donate link: https://automattic.com
 Tags: sensei lms, course, online course
-Requires at least: 5.4
-Tested up to: 5.6
+Requires at least: 5.6
+Tested up to: 5.8
 Requires PHP: 7.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,9 +50,4 @@ Create as many new courses as you like!
 1. Post to Course Creator screen
 
 == Changelog ==
-
-= 1.1.0 =
-* New: Add course blocks to new course
-
-= 1.0.0 =
-* Initial release
+[See changelog for all versions](https://raw.githubusercontent.com/Automattic/sensei-post-to-course/master/changelog.txt).
