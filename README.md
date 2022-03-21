@@ -1,2 +1,2 @@
-# sensei-post-to-course
-Turn your blog posts into online courses.
+# Sensei Post to Course Creator
+**Turn your blog posts and custom post types into online courses.**
