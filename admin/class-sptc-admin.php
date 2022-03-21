@@ -149,7 +149,7 @@ class Sensei_Post_To_Course_Admin {
 		// Create the course.
 		$course_name = isset( $input['course_name'] ) ? trim( $input['course_name'] ) : '';
 		$post_type   = isset( $input['post_type'] ) ? trim( $input['post_type'] ) : 'post';
-		$category_id = isset( $input['category_id'] ) ? intval( $input['category_id'] ) : -1;
+		$category_id = 'post' === $post_type && isset( $input['category_id'] ) ? intval( $input['category_id'] ) : -1;
 		$course_id   = $this->create_course( $course_name );
 
 		if ( 0 === $course_id ) {
