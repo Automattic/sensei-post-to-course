@@ -84,6 +84,19 @@ class Sensei_Post_To_Course_Admin {
 	}
 
 	/**
+	 * Register the stylesheets for the admin area.
+	 *
+	 * @since 1.1.0
+	 */
+	public function enqueue_scripts() {
+		$screen = get_current_screen();
+
+		if ( 'tools_page_sensei-post-to-course' === $screen->id ) {
+			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sptc-admin.js', array(), $this->version );
+		}
+	}
+
+	/**
 	 * Add "Post to Course Creator" sub-menu under the "Tools" menu.
 	 *
 	 * @since    1.0.0
@@ -135,6 +148,7 @@ class Sensei_Post_To_Course_Admin {
 
 		// Create the course.
 		$course_name = isset( $input['course_name'] ) ? trim( $input['course_name'] ) : '';
+		$post_type   = isset( $input['post_type'] ) ? trim( $input['post_type'] ) : 'post';
 		$category_id = isset( $input['category_id'] ) ? intval( $input['category_id'] ) : -1;
 		$course_id   = $this->create_course( $course_name );
 
@@ -150,7 +164,7 @@ class Sensei_Post_To_Course_Admin {
 		}
 
 		// Create the lessons.
-		$this->create_lessons( $course_id, $category_id );
+		$this->create_lessons( $course_id, $post_type, $category_id );
 
 		add_settings_error(
 			'sptc_settings',
@@ -207,14 +221,16 @@ class Sensei_Post_To_Course_Admin {
 	/**
 	 * Create the lessons.
 	 *
-	 * @since    1.0.0
-	 * @param    int    $course_id       Course ID.
-	 * @param    int    $category_id     Category ID.
+	 * @since 1.0.0
+	 * @param int    $course_id       Course ID.
+	 * @param string $post_type       Post type.
+	 * @param int    $category_id     Category ID.
 	 */
-	private function create_lessons( $course_id, $category_id ) {
+	private function create_lessons( $course_id, $post_type, $category_id ) {
 		$post_args = array(
 			'numberposts' => -1,
 			'order'       => 'ASC',
+			'post_type'   => $post_type,
 		);
 
 		if ( -1 !== $category_id ) {

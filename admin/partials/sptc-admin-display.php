@@ -23,7 +23,7 @@
 		?>
 
 		<p class="sptc-description">
-			<?php esc_html_e( 'Use this tool to create a course from all posts or from posts with a specific category.', 'sensei-post-to-course' ) ?>
+			<?php esc_html_e( 'Use this tool to create a course from posts or from a custom post type.', 'sensei-post-to-course' ) ?>
 		</p>
 
 		<div class="sptc-setting">
@@ -34,7 +34,7 @@
 			</div>
 
 			<div class="sptc-setting-value">
-				<input id="course" type="text" name="sptc_settings[course_name]" class="regular-text text-input">
+				<input id="sptc-course" type="text" name="sptc_settings[course_name]" class="regular-text text-input">
 				<p class="sptc-setting-description">
 					<?php esc_html_e( 'A new course with this name will be created.', 'sensei-post-to-course' ); ?>
 				</p>
@@ -42,6 +42,43 @@
 		</div>
 
 		<div class="sptc-setting">
+			<div class="sptc-setting-label">
+				<label for="sptc-post-type">
+					<?php esc_html_e( 'Post Type', 'sensei-post-to-course' ); ?>:
+				</label>
+			</div>
+
+			<div class="sptc-setting-value">
+				<?php
+					$post_types = get_post_types(
+						[
+							'public'   => true,
+							'_builtin' => false,
+						],
+						'objects'
+					);
+
+					echo '<select id="sptc-post-type" name="sptc_settings[post_type]">';
+					echo '<option value="post">' . __( 'Posts', 'sensei-post-to-course' ) . '</option>';
+
+					foreach ( $post_types as $post_type ) {
+						// Don't include Sensei post types.
+						if ( in_array( $post_type->name, [ 'course', 'lesson', 'quiz', 'sensei_message' ] ) ) {
+							continue;
+						}
+
+						echo '<option value="' . esc_attr( $post_type->name ) . '">' . esc_html( $post_type->label ) . '</option>';
+					}
+
+					echo '</select>';
+				?>
+				<p class="sptc-setting-description">
+					<?php esc_html_e( 'Courses will be created from this post type.', 'sensei-post-to-course' ); ?>
+				</p>
+			</div>
+		</div>
+
+		<div class="sptc-setting sptc-category">
 			<div class="sptc-setting-label">
 				<label for="category">
 					<?php esc_html_e( 'Category', 'sensei-post-to-course' ); ?>:
