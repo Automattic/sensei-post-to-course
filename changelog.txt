@@ -1,10 +1,13 @@
 *** Sensei LMS Post to Course Changelog ***
 
+2022.03.21 - version 1.2.0
+* New: Add support for custom post types [#8](https://github.com/Automattic/sensei-post-to-course/pull/8)
+
 2021.10.25 - version 1.1.1
-* Fix Sensei LMS dependency error  - #5
+* Fix: Check plugin dependencies after all other plugins are loaded [#5](https://github.com/Automattic/sensei-post-to-course/pull/5)
 
 2020.12.28 - version 1.1.0
-* New: Add course blocks to new course
+* New: Add course blocks to new course [#1](https://github.com/Automattic/sensei-post-to-course/pull/1)
 
 2020.09.04 - version 1.0.0
 * Initial release
