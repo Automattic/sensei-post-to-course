@@ -196,13 +196,14 @@ class Sensei_Post_To_Course_Admin {
 
 		// Add course blocks if the site is configured to use blocks.
 		if ( function_exists( 'register_block_type' ) && ! $this->is_classic_editor_plugin_active() ) {
-			$content = '<!-- wp:sensei-lms/button-take-course -->
-				<div class="wp-block-sensei-lms-button-take-course is-style-default wp-block-sensei-button wp-block-button has-text-align-left"><button class="wp-block-button__link">Take Course</button></div>
-				<!-- /wp:sensei-lms/button-take-course -->
+			$content = '<!-- wp:paragraph {"placeholder":"Course description, objectives, and overview.","className":"sensei-content-description"} -->
+				<p class="sensei-content-description"></p>
+				<!-- /wp:paragraph -->
 
-				<!-- wp:sensei-lms/button-contact-teacher -->
-				<div class="wp-block-sensei-lms-button-contact-teacher is-style-outline wp-block-sensei-button wp-block-button has-text-align-left"><a class="wp-block-button__link">Contact Teacher</a></div>
-				<!-- /wp:sensei-lms/button-contact-teacher -->
+				<!-- wp:sensei-lms/button-take-course -->
+				<div class="wp-block-sensei-lms-button-take-course is-style-default wp-block-sensei-button wp-block-button has-text-align-left">
+				<button class="wp-block-button__link">Take Course</button></div>
+				<!-- /wp:sensei-lms/button-take-course -->
 
 				<!-- wp:sensei-lms/course-progress /-->
 
