@@ -1,5 +1,9 @@
 *** Sensei LMS Post to Course Changelog ***
 
+2024.01.25 - version 1.2.1
+* Tweak: Update course template to match Sensei's default [#15](https://github.com/Automattic/sensei-post-to-course/pull/15)
+* Tweak: Remove Emails from Post Type dropdown [#14](https://github.com/Automattic/sensei-post-to-course/pull/14)
+
 2022.03.21 - version 1.2.0
 * New: Add support for custom post types [#8](https://github.com/Automattic/sensei-post-to-course/pull/8)
 

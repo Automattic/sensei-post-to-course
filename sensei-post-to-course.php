@@ -16,7 +16,7 @@
  * Plugin Name:       Sensei Post to Course
  * Plugin URI:        https://github.com/automattic/sensei-post-to-course
  * Description:       Turn your blog posts into online courses.
- * Version:           1.2.0
+ * Version:           1.2.1
  * Author:            Automattic
  * Author URI:        https://automattic.com
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Current plugin version.
  */
-define( 'SENSEI_POST_TO_COURSE_VERSION', '1.2.0' );
+define( 'SENSEI_POST_TO_COURSE_VERSION', '1.2.1' );
 define( 'SENSEI_POST_TO_COURSE_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 
 require_once dirname( __FILE__ ) . '/includes/class-sptc-dependency-checker.php';
