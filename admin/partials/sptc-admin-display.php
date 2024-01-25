@@ -63,7 +63,7 @@
 
 					foreach ( $post_types as $post_type ) {
 						// Don't include Sensei post types.
-						if ( in_array( $post_type->name, [ 'course', 'lesson', 'quiz', 'sensei_message' ] ) ) {
+						if ( in_array( $post_type->name, [ 'course', 'lesson', 'quiz', 'sensei_message', 'sensei_email' ] ) ) {
 							continue;
 						}
 
